@@ -20,23 +20,20 @@ class ItemBiblioteca {
   }
 }
 
-// 2. Subclasse Livro
 class Livro extends ItemBiblioteca {
   String isbn;
   int numPaginas;
 
-  // Construtor que repassa dados para o pai (super)
   Livro(String titulo, String autor, int ano, this.isbn, this.numPaginas) 
       : super(titulo, autor, ano);
 
   @override
   void exibirInfo() {
-    super.exibirInfo(); // Chama o método da classe pai
+    super.exibirInfo(); 
     print("Tipo: LIVRO | ISBN: $isbn | Páginas: $numPaginas");
   }
 }
 
-// 3. Subclasse Revista
 class Revista extends ItemBiblioteca {
   int edicao;
 
